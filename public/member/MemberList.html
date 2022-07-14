@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MemberList</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<style type="text/css">
+		#MainLogo > a {
+			color:white;
+			font-weight: bold;
+			font-size: xx-large;
+		}
+		#MainLogo {
+			background-color:#0F52BA;
+			border-bottom: solid;
+			border-bottom-color: gray;
+			border-bottom-width: thin;
+		}
+		#search_tab {
+			border: solid;
+			border-width: thin;
+			/* border-color:#63708030; */
+			padding: 5px; 
+			font-size: 10px;
+		}
+		table,th,td{
+			text-align:center;
+			border:1px solid #0F52BA20;
+		}
+		th{
+		
+		}
+		
+	</style>
+</head>
+<body>
+
+	<!-- start -->
+	
+	<div class="container">
+		<nav class="navbar">
+			<div class="container-fluid" id="MainLogo">
+				<a class="navbar-brand" href=#>EZEN</a>
+			</div>
+		</nav>
+		
+		<br>
+		
+		<div id="search_tab">
+			<div class="row">
+				<div class="col-2">
+					<select class="form-select">
+						<option selected>삭제여부</option>
+						<option>Y</option>
+						<option>N</option>
+					</select>
+				</div>
+				<div class="col-2">
+					<select class="form-select">
+						<option selected>지원분야</option>
+						<option>개발자</option>
+						<option>회계</option>
+						<option>인사</option>
+						<option>영업</option>
+						<option>홍보</option>
+						<option>연구</option>
+					</select>
+				</div>
+				<div class="col-2">
+					<select class="form-select">
+						<option selected>경력구분</option>
+						<option>신입</option>
+						<option>경력</option>
+					</select>
+				</div>
+				<div class="col-2">
+					<select class="form-select">
+						<option selected>합격여부</option>
+						<option>합격</option>
+						<option>불합격</option>
+					</select>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-2">
+					<select class="form-select" aria-label="Default select example">
+					  <option selected>검색구분</option>
+					  <option value="1">이름</option>
+					  <option value="2">주소</option>
+					  <option value="3">자격증</option>
+					  <option value="4">교육연수</option>
+					</select>
+				</div>
+				<div class="col-4" id="search_box" style="height:30px;">
+					<form class="d-flex" role="search">
+				      <input class="form-control" type="search" placeholder="검색어" aria-label="Search" style="margin-right: 5px;">
+				      <button class="btn btn-outline-primary" type="submit" style="width: 140px;">검색</button>
+				      <button class="btn btn-outline-danger" style="width: 140px;">초기화</button>
+				    </form>
+			    </div>
+		    </div>
+	    </div>
+	    <br>
+	    <div id="list_box">
+	    	<table class="table table-striped table-hover">
+	    		<tr>
+	    			<th><input type="checkbox" class="form-check-input" value=""></th>
+					<th>지원번호</th>
+					<th>이름</th>
+					<th>지원분야</th>
+					<th>경력구분</th>
+					<th>나이</th>
+					<th>전화번호</th>
+					<th>비상연락망</th>
+					<th>주소</th>
+					<th>결과</th>
+					<th>제출일</th>
+					<th>삭제여부</th>
+	    		</tr>
+	    		<tr>
+	    			<td><input type="checkbox" class="form-check-input" value=""></td>
+	    			<td>85556215</td>
+	    			<td><a href="">김지혜</td>
+	    			<td>회계</td>
+	    			<td>신입</td>
+	    			<td>26</td>
+	    			<td>010 1111 2345</td>
+	    			<td>010 5678 9101</td>
+	    			<td>서울특별시 서초구 방배동</td>
+	    			<td>합격</td>	 
+	    			<td>2022.06.30</td>
+	    			<td>N</td>
+	    		</tr>
+	    		<tr>
+	    			<td><input type="checkbox" class="form-check-input" value=""></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>	 
+	    			<td></td>
+	    			<td></td>
+	    		</tr>
+	    		<tr>
+	    			<td><input type="checkbox" class="form-check-input" value=""></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>	 
+	    			<td></td>
+	    			<td></td>
+	    		</tr>
+	    		<tr>
+	    			<td><input type="checkbox" class="form-check-input" value=""></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>	 
+	    			<td></td>
+	    			<td></td>
+	    		</tr>
+	    	</table>
+	    </div>
+	    
+	    
+    </div>
+    
+    
+	
+	<!-- end -->
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	
+	<!-- Bootstrap의 경우 classs의 활용도가 매우 높은데 
+	class="Thumbnail text_content" {<- Thumbnail과 text_content 클래스 두개 모두 호출되는것.} 
+	" " 안에서 명칭 여러개가 (spacebar) 로 구분되는데 여러개의 클래스를 받아 들인다 -->
+</body>
+</html>
+
