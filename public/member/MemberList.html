@@ -6,6 +6,13 @@
 	<title>MemberList</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<style type="text/css">
+		table,td{
+			text-align:center;
+			border:1px solid #0F52BA20;
+		}
+		#list_box_th {
+			background-color: #00808080;
+		}
 		#MainLogo > a {
 			color:white;
 			font-weight: bold;
@@ -20,165 +27,267 @@
 		#search_tab {
 			border: solid;
 			border-width: thin;
-			/* border-color:#63708030; */
+			border-color:#63708030;
 			padding: 5px; 
 			font-size: 10px;
 		}
-		table,th,td{
-			text-align:center;
-			border:1px solid #0F52BA20;
+		.custom-tooltip {
+		  --bs-tooltip-bg: var(--bs-danger);
 		}
-		th{
-		
-		}
-		
 	</style>
 </head>
 <body>
 
 	<!-- start -->
 	
-	<div class="container">
+	<div class="my-3 container">
 		<nav class="navbar">
 			<div class="container-fluid" id="MainLogo">
 				<a class="navbar-brand" href=#>EZEN</a>
+				<div class="float-end" style="color: white;">
+					<i class="fa-solid fa-user"></i> 
+					<b>101_관리자</b>님
+				</div>
 			</div>
 		</nav>
 		
-		<br>
 		
-		<div id="search_tab">
-			<div class="row">
-				<div class="col-2">
-					<select class="form-select">
-						<option selected>삭제여부</option>
-						<option>Y</option>
-						<option>N</option>
-					</select>
-				</div>
-				<div class="col-2">
-					<select class="form-select">
-						<option selected>지원분야</option>
-						<option>개발자</option>
-						<option>회계</option>
-						<option>인사</option>
-						<option>영업</option>
-						<option>홍보</option>
-						<option>연구</option>
-					</select>
-				</div>
-				<div class="col-2">
-					<select class="form-select">
-						<option selected>경력구분</option>
-						<option>신입</option>
-						<option>경력</option>
-					</select>
-				</div>
-				<div class="col-2">
-					<select class="form-select">
-						<option selected>합격여부</option>
-						<option>합격</option>
-						<option>불합격</option>
-					</select>
-				</div>
-			</div>
-			<br>
-			<div class="row">
-				<div class="col-2">
-					<select class="form-select" aria-label="Default select example">
-					  <option selected>검색구분</option>
-					  <option value="1">이름</option>
-					  <option value="2">주소</option>
-					  <option value="3">자격증</option>
-					  <option value="4">교육연수</option>
-					</select>
-				</div>
-				<div class="col-4" id="search_box" style="height:30px;">
-					<form class="d-flex" role="search">
-				      <input class="form-control" type="search" placeholder="검색어" aria-label="Search" style="margin-right: 5px;">
-				      <button class="btn btn-outline-primary" type="submit" style="width: 140px;">검색</button>
-				      <button class="btn btn-outline-danger" style="width: 140px;">초기화</button>
-				    </form>
+		<div class="container">
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<button class="nav-link" id="code_group_manage_tab" data-bs-toggle="pill" data-bs-target="#code_group_manage" type="button">코드그룹관리</button>
+				</li>
+				<li class="nav-item">
+					<button class="nav-link" id="code_manage_tab" data-bs-toggle="pill" data-bs-target="#code_manage" type="button">코드관리</button>
+				</li>
+	    		<li class="nav-item">
+	    			<button class="nav-link active" id="member_management_tab" data-bs-toggle="pill" data-bs-target="#member_management" type="button">회원관리</button>
+	    		</li>
+	    	</ul>
+	    	
+	    	<div class="tab-content">
+	    		<div class="tab-pane fade" id="code_group_manage" role="tabpanel">
+	    			<h3>코드그룹관리 내용물</h3>
+	    			<p>아직 그런거 없다</p>
+	    		</div>
+	    		<div class="tab-pane fade" id="code_manage" role="tabpanel">
+	    			<h3>으어얽</h3>
+	    		</div>
+	    		<div class="tab-pane fade show active" id="member_management">
+					<div class="mb-3" id="search_tab">
+						<div class="m-3 row">
+							<div class="col-2">
+								<select class="form-select">
+									<option selected>삭제여부</option>
+									<option>Y</option>
+									<option>N</option>
+								</select>
+							</div>
+							<div class="col-2">
+								<select class="form-select">
+									<option selected>지원분야</option>
+									<option>개발자</option>
+									<option>회계</option>
+									<option>인사</option>
+									<option>영업</option>
+									<option>홍보</option>
+									<option>연구</option>
+								</select>
+							</div>
+							<div class="col-2">
+								<select class="form-select">
+									<option selected>경력구분</option>
+									<option>신입</option>
+									<option>경력</option>
+								</select>
+							</div>
+							<div class="col-2">
+								<select class="form-select">
+									<option selected>합격여부</option>
+									<option>합격</option>
+									<option>불합격</option>
+								</select>
+							</div>
+							<div class="col-2">
+								<input type="text" class="form-control" placeholder="2000.01.02(시작일)">
+							</div>
+							<div class="col-2">
+								<input type="text" class="form-control" placeholder="2001.12.31(종료일)">
+							</div>
+						</div>
+						<br>
+						<div class="m-3 row">
+							<div class="col-2">
+								<select class="form-select" aria-label="Default select example">
+								  <option selected>검색구분</option>
+								  <option value="1">이름</option>
+								  <option value="2">주소</option>
+								  <option value="3">자격증</option>
+								  <option value="4">교육연수</option>
+								</select>
+							</div>
+							<div class="col-4" id="search_box" style="height:30px;">
+								<form class="d-flex" role="search">
+							      <input class="form-control" type="search" placeholder="검색어" aria-label="Search" style="margin-right: 5px;">
+							      <button class="btn btn-outline-primary" type="submit" style="width: 140px;">검색</button> &nbsp;
+							      <button class="btn btn-outline-danger"><i class="fa-solid fa-rotate-right"></i></button>
+							    </form>
+						    </div>
+					    </div>
+				    </div>
+				    
+				    <br>
+				    
+				    <div class="mb-3" id="list_box">
+				    	<table class="table table-striped table-hover">
+				    		<tr id="list_box_th">
+				    			<th><input type="checkbox" class="form-check-input" name="ChkA" id="ChkA"></th>
+								<th>지원번호</th>
+								<th>이름</th>
+								<th>지원분야</th>
+								<th>경력구분</th>
+								<th>나이</th>
+								<th>전화번호</th>
+								<th>비상연락망</th>
+								<th>주소</th>
+								<th>결과</th>
+								<th>제출일</th>
+								<th>삭제여부</th>
+				    		</tr>
+				    		<tr>
+				    			<td><input type="checkbox" class="form-check-input" name="Chk"></td>
+				    			<td>85556215</td>
+				    			<td><a href="">김지혜</td>
+				    			<td>회계</td>
+				    			<td>신입</td>
+				    			<td>26</td>
+				    			<td>010 1111 2345</td>
+				    			<td>010 5678 9101</td>
+				    			<td>서울특별시 서초구 방배동</td>
+				    			<td></td>	 
+				    			<td>2022.06.30</td>
+				    			<td>N</td>
+				    		</tr>
+				    		<tr>
+				    			<td><input type="checkbox" class="form-check-input" name="Chk"></td>
+				    			<td>22415698</td>
+				    			<td>김찬수</td>
+				    			<td>인사</td>
+				    			<td>경력</td>
+				    			<td>33</td>
+				    			<td>010 2223 6485</td>
+				    			<td>010 2223 6485</td>
+				    			<td>서울특별시 송파구 가락동</td>
+				    			<td></td>	 
+				    			<td>2022.06.30</td>
+				    			<td>N</td>
+				    		</tr>
+				    		<tr>
+				    			<td><input type="checkbox" class="form-check-input" name="Chk"></td>
+				    			<td>95145162</td>
+				    			<td>홍석범</td>
+				    			<td>인사</td>
+				    			<td>신입</td>
+				    			<td>25</td>
+				    			<td>010 5600 8542</td>
+				    			<td>010 4231 9685</td>
+				    			<td>서울특별시 양천구 신정도</td>
+				    			<td></td>	 
+				    			<td>2022.06.29</td>
+				    			<td>N</td>
+				    		</tr>
+				    		<tr>
+				    			<td><input type="checkbox" class="form-check-input" name="Chk"></td>
+				    			<td>25478563</td>
+				    			<td>김휘찬</td>
+				    			<td>영업</td>
+				    			<td>인입</td>
+				    			<td>23</td>
+				    			<td>010 4568 1234</td>
+				    			<td>010 7845 5212</td>
+				    			<td>인청광역시 서구 당하동</td>
+				    			<td>불합격</td>	 
+				    			<td>2022.06.29</td>
+				    			<td>N</td>
+				    		</tr>
+				    	</table>
+				    	<br>
+				    	<nav class="nav justify-content-center">
+						  <ul class="pagination">
+						  	<li class="page-item">
+						      <a class="page-link" href="#" >
+						        <span><i class="fa-solid fa-backward-step"></i></span>
+						      </a>
+						    </li>
+						    <li class="page-item">
+						      <a class="page-link" href="#" aria-label="Previous">
+						        <span><i class="fa-solid fa-chevron-left"></i></span>
+						      </a>
+						    </li>
+						    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+						    <li class="page-item"><a class="page-link" href="#">2</a></li>
+						    <li class="page-item"><a class="page-link" href="#">3</a></li>
+						    <li class="page-item">
+						      <a class="page-link" href="#" aria-label="Next">
+						        <span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+						      </a>
+						    </li>
+						    <li class="page-item">
+						      <a class="page-link" href="#">
+						        <span><i class="fa-solid fa-forward-step"></i></span>
+						      </a>
+						    </li>
+						  </ul>
+						</nav>
+				    </div>
+				    <div class="position-relative">
+				    	<div class="position-absolute top-0">
+					    	<button type="button" class="btn btn-danger" title="삭제여부 삭제처리" data-bs-toggle="modal" data-bs-target="#state_delete_modal">
+				       			<i class="fa-solid fa-trash-can"></i></button>
+					    	<button type="button" class="btn btn-danger" title="데이터 삭제" data-bs-toggle="modal" data-bs-target="#data_delete_modal"><i class="fa-solid fa-skull"></i></button>
+				    	</div>
+				    	<div class="position-absolute end-0">
+					    	<button type="button" class="btn btn-success"><i class="fa-solid fa-file-excel"></i></button>
+					    	<button type="button" class="btn btn-info"><i class="fa-solid fa-plus"></i></button>
+				    	</div>
+				    	<div class="modal" tabindex="-1" id="state_delete_modal">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title">삭제여부 삭제처리</h5>
+						        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						      </div>
+						      <div class="modal-body">
+						        <p>정말 삭제처리하시겠습니까?</p>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+						        <button type="button" class="btn btn-danger">삭제처리</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+						<div class="modal" tabindex="-1" id="data_delete_modal">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title">데이터 삭제</h5>
+						        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						      </div>
+						      <div class="modal-body">
+						        <p>정말 삭제하시겠습니까?</p>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+						        <button type="button" class="btn btn-danger">삭제</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+				    </div>
 			    </div>
-		    </div>
-	    </div>
-	    <br>
-	    <div id="list_box">
-	    	<table class="table table-striped table-hover">
-	    		<tr>
-	    			<th><input type="checkbox" class="form-check-input" value=""></th>
-					<th>지원번호</th>
-					<th>이름</th>
-					<th>지원분야</th>
-					<th>경력구분</th>
-					<th>나이</th>
-					<th>전화번호</th>
-					<th>비상연락망</th>
-					<th>주소</th>
-					<th>결과</th>
-					<th>제출일</th>
-					<th>삭제여부</th>
-	    		</tr>
-	    		<tr>
-	    			<td><input type="checkbox" class="form-check-input" value=""></td>
-	    			<td>85556215</td>
-	    			<td><a href="">김지혜</td>
-	    			<td>회계</td>
-	    			<td>신입</td>
-	    			<td>26</td>
-	    			<td>010 1111 2345</td>
-	    			<td>010 5678 9101</td>
-	    			<td>서울특별시 서초구 방배동</td>
-	    			<td>합격</td>	 
-	    			<td>2022.06.30</td>
-	    			<td>N</td>
-	    		</tr>
-	    		<tr>
-	    			<td><input type="checkbox" class="form-check-input" value=""></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>	 
-	    			<td></td>
-	    			<td></td>
-	    		</tr>
-	    		<tr>
-	    			<td><input type="checkbox" class="form-check-input" value=""></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>	 
-	    			<td></td>
-	    			<td></td>
-	    		</tr>
-	    		<tr>
-	    			<td><input type="checkbox" class="form-check-input" value=""></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>
-	    			<td></td>	 
-	    			<td></td>
-	    			<td></td>
-	    		</tr>
-	    	</table>
-	    </div>
-	    
-	    
+			</div>
+		</div>
     </div>
     
     
@@ -186,8 +295,27 @@
 	<!-- end -->
 	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/bf82a9a80d.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#ChkA").click(function(){
+				if($("#ChkA").is(":checked")) $("input[name=Chk]").prop("checked", true);
+				else $("input[name=Chk]").prop("checked",false);
+			});
+			
+			$("input[name=Chk]").click(function(){
+				var total = $("input[name=Chk]").length;
+				var checked = $("input[name=Chk]:checked").length;
+				
+				if(total != checked) $("#ChkA").prop("checked",false);
+				else $("#ChkA").prop("checked",true);
+			})
+		});
+	</script>
 	
-	<!-- Bootstrap의 경우 classs의 활용도가 매우 높은데 
+	
+	<!-- Bootstrap의 경우 class의 활용도가 매우 높은데 
 	class="Thumbnail text_content" {<- Thumbnail과 text_content 클래스 두개 모두 호출되는것.} 
 	" " 안에서 명칭 여러개가 (spacebar) 로 구분되는데 여러개의 클래스를 받아 들인다 -->
 </body>
