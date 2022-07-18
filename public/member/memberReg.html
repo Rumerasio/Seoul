@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MemberReg</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<style type="text/css">
+		table,td{
+			text-align:center;
+			border:1px solid #0F52BA20;
+		}
+		#list_box_th {
+			background-color: #00808080;
+		}
+		#MainLogo > a {
+			color:white;
+			font-weight: bold;
+			font-size: xx-large;
+		}
+		#MainLogo {
+			background-color:#0F52BA;
+			border-bottom: solid;
+			border-bottom-color: gray;
+			border-bottom-width: thin;
+		}
+		#search_tab {
+			border: solid;
+			border-width: thin;
+			border-color:#63708030;
+			padding: 5px; 
+			font-size: 10px;
+		}
+		.custom-tooltip {
+		  --bs-tooltip-bg: var(--bs-danger);
+		}
+		#input-file-button {
+			padding: 6px 20px;
+			background-color:#0080ff;
+			border-radius: 4px;
+			color: white;
+			cursor: pointer;
+		}
+		.input-group-text{
+			background-color: #00808080;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- start -->
+	
+	<div class="my-3 container">
+		<nav class="navbar">
+			<div class="container-fluid" id="MainLogo">
+				<a class="navbar-brand" href=#>EZEN</a>
+				<div class="float-end" style="color: white;">
+					<i class="fa-solid fa-user"></i> 
+					<b>101_관리자</b>님
+				</div>
+			</div>
+		</nav>
+		
+		
+		<div class="container">
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<button class="nav-link" id="code_group_manage_tab" data-bs-toggle="pill" data-bs-target="#code_group_manage" type="button">코드그룹관리</button>
+				</li>
+				<li class="nav-item">
+					<button class="nav-link" id="code_manage_tab" data-bs-toggle="pill" data-bs-target="#code_manage" type="button">코드관리</button>
+				</li>
+	    		<li class="nav-item">
+	    			<button class="nav-link active" id="member_management_tab" data-bs-toggle="pill" data-bs-target="#member_management" type="button">회원관리</button>
+	    		</li>
+	    	</ul>
+	    	
+	    	<div class="tab-content">
+	    		<div class="tab-pane fade" id="code_group_manage" role="tabpanel">
+	    			<h3>코드그룹관리 내용물</h3>
+	    			<p>아직 그런거 없다</p>
+	    		</div>
+	    		<div class="tab-pane fade" id="code_manage" role="tabpanel">
+	    			<h3>으어얽</h3>
+	    		</div>
+	    		<div class="tab-pane fade show active" id="member_management">
+				    
+				    <br>
+				    <form>
+				    	<div class="container">
+						    <h2 style="font-family: ">이력서 추가</h2><br>
+						    <div id="TopInfo">
+							    <div class="input-group mb-3">
+									<span class="input-group-text">지원분야</span>
+									<input type="text" class="form-control">
+									<span class="input-group-text">경력구분<br>(신입/경력)</span>
+									<input type="text" class="form-control">
+									<span class="input-group-text">희망연봉</span>
+									<input type="text" class="form-control">
+								</div>
+							</div>
+							<h6>□기본정보</h6>
+							<div id="BasicInfo">
+								<div class="row g-0" id=>
+									<div class="col-md-2">
+										<img class="img-thumbnail" alt="" id="preview" style="width:160px; height:145px;">
+										<label id="input-file-button" for="input-file" style="position: relative; left: 25px;">
+											사진첨부
+										</label>
+										<input type="file" onchange="readURL(this);" id="input-file" style="display:none;">
+									</div>
+									<div class="col-md-10">
+										<div class="row input-group">
+											<span class="col-2 input-group-text">성명</span>
+											<input class="col-4 form-control" type="text">
+											<span class="col-2 input-group-text">한문</span>
+											<input class="col-4 form-control" type="text">
+										</div>
+										<div class="row input-group">
+											<span class="col-2 input-group-text">영문</span>
+											<input class="col-4 form-control" type="text">
+											<span class="col-2 input-group-text">생년월일</span>
+											<input class="col-4 form-control" type="text">
+										</div>
+										<div class="row input-group">
+											<span class="col-2 input-group-text">전화번호</span>
+											<input class="col-4 form-control" type="text">
+											<span class="col-2 input-group-text">비상연락망</span>
+											<input class="col-4 form-control" type="text">
+										</div>
+										<div class="row input-group">
+											<span class="col-2 input-group-text">이메일</span>
+											<input class="col-4 form-control" type="text">
+											<span class="col-2 input-group-text">나이</span>
+											<input class="col-4 form-control" type="text">
+										</div>
+										<div class="row input-group">
+											<span class="col-2 input-group-text">주소</span>
+											<input class="col-10 form-control" type="text">
+										</div>
+										<div class="row input-group">
+											<span class="col-2 input-group-text">취미생활</span>
+											<input class="col-10 form-control" type="text" placeholder="선택사항">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+			    </div>
+			</div>
+		</div>
+    </div>
+    
+    
+	
+	<!-- end -->
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/bf82a9a80d.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script>
+	function readURL(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				document.getElementById('preview').src = e.target.result;
+			};
+			reader.readAsDataURL(input.files[0]);
+		} 
+		else {
+			document.getElementById('preview').src = "";
+		}
+	}
+	</script>
+	
+	
+	<!-- Bootstrap의 경우 class의 활용도가 매우 높은데 
+	class="Thumbnail text_content" {<- Thumbnail과 text_content 클래스 두개 모두 호출되는것.} 
+	" " 안에서 명칭 여러개가 (spacebar) 로 구분되는데 여러개의 클래스를 받아 들인다 -->
+</body>
+</html>
+
