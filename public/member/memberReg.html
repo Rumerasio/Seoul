@@ -42,8 +42,9 @@
 			color: white;
 			cursor: pointer;
 		}
-		.input-group-text{
+		.input_titles {
 			background-color: #00808080;
+			font-weight: bold;
 		}
 	</style>
 </head>
@@ -92,11 +93,11 @@
 						    <h2 style="font-family:Do Hyeon;">이력서 추가</h2><br>
 						    <div id="TopInfo">
 							    <div class="input-group mb-3">
-									<span class="input-group-text">지원분야</span>
+									<span class="input-group-text input_titles">지원분야</span>
 									<input type="text" class="form-control">
-									<span class="input-group-text">경력구분<br>(신입/경력)</span>
+									<span class="input-group-text input_titles">경력구분<br>(신입/경력)</span>
 									<input type="text" class="form-control">
-									<span class="input-group-text">희망연봉</span>
+									<span class="input-group-text input_titles">희망연봉</span>
 									<input type="text" class="form-control">
 								</div>
 							</div>
@@ -111,37 +112,80 @@
 										<input type="file" onchange="readURL(this);" id="input-file" style="display:none;">
 									</div>
 									<div class="col-md-10">
-										<div class="row input-group">
-											<span class="col-2 input-group-text">성명</span>
+										<div class="row input-group mb-2">
+											<span class="col-2 input-group-text input_titles justify-content-center">성명</span>
 											<input class="col-4 form-control" type="text">
-											<span class="col-2 input-group-text">한문</span>
-											<input class="col-4 form-control" type="text">
-										</div>
-										<div class="row input-group">
-											<span class="col-2 input-group-text">영문</span>
-											<input class="col-4 form-control" type="text">
-											<span class="col-2 input-group-text">생년월일</span>
+											<span class="col-2 input-group-text input_titles justify-content-center">한문</span>
 											<input class="col-4 form-control" type="text">
 										</div>
-										<div class="row input-group">
-											<span class="col-2 input-group-text">전화번호</span>
+										<div class="row input-group mb-2">
+											<span class="col-2 input-group-text input_titles justify-content-center">영문</span>
 											<input class="col-4 form-control" type="text">
-											<span class="col-2 input-group-text">비상연락망</span>
-											<input class="col-4 form-control" type="text">
-										</div>
-										<div class="row input-group">
-											<span class="col-2 input-group-text">이메일</span>
-											<input class="col-4 form-control" type="text">
-											<span class="col-2 input-group-text">나이</span>
+											<span class="col-2 input-group-text input_titles justify-content-center">생년월일</span>
 											<input class="col-4 form-control" type="text">
 										</div>
-										<div class="row input-group">
-											<span class="col-2 input-group-text">주소</span>
+										<div class="row input-group mb-2">
+											<span class="col-2 input-group-text input_titles justify-content-center">전화번호</span>
+											<div class="col-4">
+												<div class="input-group" style="font-size: 22px;">
+													<select class="form-select" aria-label="cp_front">
+													  <option value="02">02</option>
+													  <option value="010" selected>010</option>
+													  <option value="011">011</option>
+													</select>
+													&nbsp;-&nbsp;
+		 											<input type="text" aria-label="cp_middle" class="form-control">&nbsp;-&nbsp;
+		 											<input type="text" aria-label="cp_end" class="form-control">
+	 											</div>
+ 											</div>
+ 											<span class="col-2 input-group-text input_titles justify-content-center">비상연락망</span>
+											<div class="col-4" style="font-size: 22px;">
+												<div class ="input-group">
+													<select class="form-select" aria-label="ep_front">
+													  <option value="02">02</option>
+													  <option value="010" selected>010</option>
+													  <option value="011">011</option>
+													</select>
+													&nbsp;-&nbsp;
+		 											<input type="text" aria-label="ep_middle" class="form-control">&nbsp;-&nbsp;
+		 											<input type="text" aria-label="ep_end" class="form-control">
+	 											</div>
+ 											</div>
+										</div>
+										<div class="row input-group mb-2">
+											<span class="col-2 input-group-text input_titles justify-content-center">이메일</span>
+											<span class="col-4">
+												<span class="input-group" style="font-size: 22px;">
+													<input class="form-control" type="text">&nbsp;@&nbsp;
+													<input class="form-control" type="text">
+												</span>
+											</span>
+											<span class="col-2 input-group-text input_titles justify-content-center">나이</span>
+											<input class="col-4 form-control" type="text">
+										</div>
+										<div class="row input-group mb-2">
+											<span class="col-2 input-group-text input_titles justify-content-center">주소</span>
 											<input class="col-10 form-control" type="text">
 										</div>
-										<div class="row input-group">
-											<span class="col-2 input-group-text">취미생활</span>
+										<div class="row input-group mb-2">
+											<span class="col-2 input-group-text input_titles justify-content-center">취미생활</span>
 											<input class="col-10 form-control" type="text" placeholder="선택사항">
+										</div>
+									</div>
+								</div>
+							</div>
+							<h6>□학력사항(최신이력이 가장 위로)</h6>
+							<div id="EducationalInfo">
+								<div class="row g-0">
+									<div class="col-md-2">
+									</div>
+									<div class="col-md-10">
+										<div class="row input-group ">
+											<span class="col input-group-text input_titles justify-content-center">기간</span>
+											<span class="col input-group-text input_titles justify-content-center">출신학교</span>
+											<span class="col input-group-text input_titles justify-content-center">구분</span>
+											<span class="col input-group-text input_titles justify-content-center">학과</span>
+											<span class="col input-group-text input_titles justify-content-center">소재지</span>
 										</div>
 									</div>
 								</div>
