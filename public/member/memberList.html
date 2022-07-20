@@ -42,8 +42,15 @@
 			<div class="container-fluid" id="MainLogo">
 				<a class="navbar-brand" href="./memberList.html">EZEN</a>
 				<div class="float-end" style="color: white;">
-					<i class="fa-solid fa-user"></i> 
-					<b>101_관리자</b>님<br>
+					<div class="btn-group dropend">
+					  <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" style="color:white;background-color: #0F52BA;">
+					    <i class="fa-solid fa-user"></i><b>101_관리자</b>님
+					  </button>
+					  <ul class="dropdown-menu">
+					  	<li><button class="dropdown-item" type="button" disabled>101_관리자 님</button></li>
+					    <li><a class="dropdown-item" href="#" style="color: red;">로그아웃</a></li>
+					  </ul>
+					</div>
 				</div>
 			</div>
 		</nav>
