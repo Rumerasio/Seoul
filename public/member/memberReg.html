@@ -222,8 +222,8 @@
 								</div>
 								<div class="row input-group">
 									<input type="text" class="col-2 form-control" placeholder="2021.06 ~ 2021.08">
-									<input type="text" class="form-control" placeholder="ㅇㅇㅇ학원">
-									<input type="text" class="form-control" placeholder="Python활용 빅데이터 분석과정">
+									<input type="text" class="col-2 form-control" placeholder="ㅇㅇㅇ학원">
+									<input type="text" class="col-8 form-control" placeholder="Python활용 빅데이터 분석과정">
 								</div>
 								<div class="row input-group">
 									<input type="text" class="form-control">
@@ -238,31 +238,133 @@
 								<div class="row g-0">
 									<div class="col-md">
 										<div class="row input-group ">
-											<span class="col input-group-text input_titles justify-content-center">기간</span>
-											<span class="col input-group-text input_titles justify-content-center">출신학교</span>
-											<span class="col input-group-text input_titles justify-content-center">구분</span>
-											<span class="col input-group-text input_titles justify-content-center">학과</span>
-											<span class="col input-group-text input_titles justify-content-center">소재지</span>
+											<span class="col-3 input-group-text input_titles justify-content-center">취득일</span>
+											<span class="col-3 input-group-text input_titles justify-content-center">종류 및 등급</span>
+											<span class="col-2 input-group-text input_titles justify-content-center">발행처</span>
+											<span class="col-4 input-group-text input_titles justify-content-center">보유기술 및 수준</span>
 										</div>
 										<div class="row input-group">
-											<input type="text" class="form-control" placeholder="2017.03 ~ 2021.02">
-											<input type="text" class="form-control" placeholder="ㅇㅇ대학교">
-											<input type="text" class="form-control" placeholder="졸업">
-											<input type="text" class="form-control" placeholder="00과">
-											<input type="text" class="form-control" placeholder="서울">		
+											<div class="col-3">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-3">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-4">
+												<input type="text" class="form-control">
+											</div>
 										</div>
 										<div class="row input-group">
-											<input type="text" class="form-control" placeholder="2014.03 ~ 2017.02">
-											<input type="text" class="form-control" placeholder="ㅇㅇ고등학교">
-											<input type="text" class="form-control" placeholder="졸업">
-											<input type="text" class="form-control" placeholder="-">
-											<input type="text" class="form-control" placeholder="서울">		
+											<div class="col-3">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-3">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-4">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<h6>□경력사항(4대 보험 가입 경력)</h6>
+							<br>
+							<div id="CareerInfo">
+								<div class="row g-0">
+									<div class="col-md">
+										<div class="row input-group ">
+											<div class="col-3 input-group-text input_titles justify-content-center">활동기간</div>
+											<div class="col-2 input-group-text input_titles justify-content-center">기관</div>
+											<div class="col-2 input-group-text input_titles justify-content-center">담당업무</div>
+											<div class="col-5 input-group-text input_titles justify-content-center">경험 및 습득역량</div>
+										</div>
+										<div class="row input-group">
+											<div class="col-3">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-5">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="row input-group">
+											<div class="col-3">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-5">
+												<input type="text" class="form-control">
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</form>
+					<br><br>
+					<div class="position-relative">
+				    	<div class="position-absolute top-0">
+					    	<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#back_modal">뒤로가기</button>
+				    	</div>
+				    	<div class="position-absolute end-0">
+					    	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_modal">제출하기</button>
+				    	</div>
+				    	<div class="modal" tabindex="-1" id="back_modal">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title">뒤로가기</h5>
+						        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						      </div>
+						      <div class="modal-body">
+						        <p>작성된 내용은 저장되지 않습니다.</p>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+						        <a href="./memberList.html"><button type="button" class="btn btn-danger">확인</button></a>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+						<div class="modal" tabindex="-1" id="register_modal">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title">제출</h5>
+						        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						      </div>
+						      <div class="modal-body">
+						        <p>
+						        	제출하고나면 수정할 수 없습니다.<br>
+						        	정말 제출하시겠습니까?
+						        </p>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+						        <a href="./memberList.html"><button type="button" class="btn btn-primary">제출</button></a>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+				    </div><br><br><br><br>
 			    </div>
 			</div>
 		</div>

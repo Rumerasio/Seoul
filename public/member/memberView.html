@@ -34,6 +34,9 @@
 		.custom-tooltip {
 		  --bs-tooltip-bg: var(--bs-danger);
 		}
+		.writed {
+			background-color: white;
+		}
 	</style>
 </head>
 <body>
@@ -43,10 +46,17 @@
 	<div class="my-3 container">
 		<nav class="navbar">
 			<div class="container-fluid" id="MainLogo">
-				<a class="navbar-brand" href=#>EZEN</a>
+				<a class="navbar-brand" href="./memberList.html">EZEN</a>
 				<div class="float-end" style="color: white;">
-					<i class="fa-solid fa-user"></i> 
-					<b>101_관리자</b>님
+					<div class="btn-group dropend">
+					  <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" style="color:white;background-color: #0F52BA;">
+					    <i class="fa-solid fa-user"></i><b>101_관리자</b>님
+					  </button>
+					  <ul class="dropdown-menu">
+					  	<li><button class="dropdown-item" type="button" disabled>101_관리자 님</button></li>
+					    <li><a class="dropdown-item" href="#" style="color: red;">로그아웃</a></li>
+					  </ul>
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -74,10 +84,238 @@
 	    			<h3>으어얽</h3>
 	    		</div>
 	    		<div class="tab-pane fade show active" id="member_management">
-				    
+	    			<br>
+				    <h3><b>김지혜</b>님 이력서</h3>
 				    <br>
-				    <h1>김지혜님의 이력서</h1>
-				    
+				    <form>
+				    	<div class="container">
+						    <div id="TopInfo">
+							    <div class="input-group mb-3">
+									<span class="col-1 input-group-text input_titles">지원분야</span>
+									<div class="col-3 writed">
+										<input type="text" class="form-control-plaintext" value="개발자">
+									</div>
+									<span class="col-1 input-group-text input_titles">경력구분<br>(신입/경력)</span>
+									<div class="col-3 input-group-text writed">
+										<input type="text" readonly class="form-control-plaintext" value="신입">
+									</div>
+									<span class="col-1 input-group-text input_titles">희망연봉</span>
+									<div class="col-3 input-group-text writed">
+										<input type="text" readonly class="form-control-plaintext" value="3500만원">
+									</div>
+								</div>
+							</div>
+							<h6>□기본정보</h6>
+							<div id="BasicInfo">
+								<div class="row g-0" id=>
+									<div class="col-md-2">
+										<img class="img-thumbnail" alt="" id="preview" style="width:160px; height:145px;">
+										<label id="input-file-button" for="input-file" style="position: relative; left: 25px;">
+											사진첨부
+										</label>
+										<input type="file" onchange="readURL(this);" id="input-file" style="display:none;">
+									</div>
+									<div class="col-md-10">
+										<div class="row input-group mb-2">
+											<span class="col-2 input-group-text input_titles justify-content-center">성명</span>
+											<input class="col-4 form-control" type="text">
+											<span class="col-2 input-group-text input_titles justify-content-center">한문</span>
+											<input class="col-4 form-control" type="text">
+										</div>
+										<div class="row input-group mb-2">
+											<span class="col-2 input-group-text input_titles justify-content-center">영문</span>
+											<input class="col-4 form-control" type="text">
+											<span class="col-2 input-group-text input_titles justify-content-center">생년월일</span>
+											<input class="col-4 form-control" type="text">
+										</div>
+										<div class="row input-group mb-2">
+											<span class="col-2 input-group-text input_titles justify-content-center">전화번호</span>
+											<div class="col-4">
+												<div class="input-group" style="font-size: 22px;">
+													<select class="form-select" aria-label="cp_front">
+													  <option value="02">02</option>
+													  <option value="010" selected>010</option>
+													  <option value="011">011</option>
+													</select>
+													&nbsp;-&nbsp;
+		 											<input type="text" aria-label="cp_middle" class="form-control">&nbsp;-&nbsp;
+		 											<input type="text" aria-label="cp_end" class="form-control">
+	 											</div>
+ 											</div>
+ 											<span class="col-2 input-group-text input_titles justify-content-center">비상연락망</span>
+											<div class="col-4" style="font-size: 22px;">
+												<div class ="input-group">
+													<select class="form-select" aria-label="ep_front">
+													  <option value="02">02</option>
+													  <option value="010" selected>010</option>
+													  <option value="011">011</option>
+													</select>
+													&nbsp;-&nbsp;
+		 											<input type="text" aria-label="ep_middle" class="form-control">&nbsp;-&nbsp;
+		 											<input type="text" aria-label="ep_end" class="form-control">
+	 											</div>
+ 											</div>
+										</div>
+										<div class="row input-group mb-2">
+											<span class="col-2 input-group-text input_titles justify-content-center">이메일</span>
+											<span class="col-4">
+												<span class="input-group" style="font-size: 22px;">
+													<input class="form-control" type="text">&nbsp;@&nbsp;
+													<input class="form-control" type="text">
+												</span>
+											</span>
+											<span class="col-2 input-group-text input_titles justify-content-center">나이</span>
+											<input class="col-4 form-control" type="text">
+										</div>
+										<div class="row input-group mb-2">
+											<span class="col-2 input-group-text input_titles justify-content-center">주소</span>
+											<input class="col-10 form-control" type="text">
+										</div>
+										<div class="row input-group mb-2">
+											<span class="col-2 input-group-text input_titles justify-content-center">취미생활</span>
+											<input class="col-10 form-control" type="text" placeholder="선택사항">
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<h6>□학력사항(최신이력이 가장 위로)</h6>
+							<br>
+							<div id="AcademicInfo">
+								<div class="row g-0">
+									<div class="col-md">
+										<div class="row input-group ">
+											<span class="col input-group-text input_titles justify-content-center">기간</span>
+											<span class="col input-group-text input_titles justify-content-center">출신학교</span>
+											<span class="col input-group-text input_titles justify-content-center">구분</span>
+											<span class="col input-group-text input_titles justify-content-center">학과</span>
+											<span class="col input-group-text input_titles justify-content-center">소재지</span>
+										</div>
+										<div class="row input-group">
+											<input type="text" class="form-control" placeholder="2017.03 ~ 2021.02">
+											<input type="text" class="form-control" placeholder="ㅇㅇ대학교">
+											<input type="text" class="form-control" placeholder="졸업">
+											<input type="text" class="form-control" placeholder="00과">
+											<input type="text" class="form-control" placeholder="서울">		
+										</div>
+										<div class="row input-group">
+											<input type="text" class="form-control" placeholder="2014.03 ~ 2017.02">
+											<input type="text" class="form-control" placeholder="ㅇㅇ고등학교">
+											<input type="text" class="form-control" placeholder="졸업">
+											<input type="text" class="form-control" placeholder="-">
+											<input type="text" class="form-control" placeholder="서울">		
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<h6>□교육연수</h6>
+							<br>
+							<div id="EducationalInfo">
+								<div class="row input-group ">
+									<span class="col input-group-text input_titles justify-content-center">연수기간</span>
+									<span class="col input-group-text input_titles justify-content-center">연수기관</span>
+									<span class="col input-group-text input_titles justify-content-center">연수과정 및 내용</span>
+								</div>
+								<div class="row input-group">
+									<input type="text" class="col-2 form-control" placeholder="2021.06 ~ 2021.08">
+									<input type="text" class="col-2 form-control" placeholder="ㅇㅇㅇ학원">
+									<input type="text" class="col-8 form-control" placeholder="Python활용 빅데이터 분석과정">
+								</div>
+								<div class="row input-group">
+									<input type="text" class="form-control">
+									<input type="text" class="form-control">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+							<br>
+							<h6>□자격사항</h6>
+							<br>
+							<div id="LicenseInfo">
+								<div class="row g-0">
+									<div class="col-md">
+										<div class="row input-group ">
+											<span class="col-3 input-group-text input_titles justify-content-center">취득일</span>
+											<span class="col-3 input-group-text input_titles justify-content-center">종류 및 등급</span>
+											<span class="col-2 input-group-text input_titles justify-content-center">발행처</span>
+											<span class="col-4 input-group-text input_titles justify-content-center">보유기술 및 수준</span>
+										</div>
+										<div class="row input-group">
+											<div class="col-3">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-3">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-4">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="row input-group">
+											<div class="col-3">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-3">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-4">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<h6>□경력사항(4대 보험 가입 경력)</h6>
+							<br>
+							<div id="CareerInfo">
+								<div class="row g-0">
+									<div class="col-md">
+										<div class="row input-group ">
+											<div class="col-3 input-group-text input_titles justify-content-center">활동기간</div>
+											<div class="col-2 input-group-text input_titles justify-content-center">기관</div>
+											<div class="col-2 input-group-text input_titles justify-content-center">담당업무</div>
+											<div class="col-5 input-group-text input_titles justify-content-center">경험 및 습득역량</div>
+										</div>
+										<div class="row input-group">
+											<div class="col-3">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-5">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="row input-group">
+											<div class="col-3">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-5">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
 			    </div>
 			</div>
 		</div>
