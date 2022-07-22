@@ -3,8 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>MemberView</title>
+	<title>MemberReg</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 	<style type="text/css">
 		table,td{
 			text-align:center;
@@ -42,11 +43,8 @@
 			cursor: pointer;
 		}
 		.input_titles {
-			background-color:#ffff7f;
+			background-color: #00808080;
 			font-weight: bold;
-		}
-		.writed {
-			background-color: white;
 		}
 	</style>
 </head>
@@ -95,91 +93,90 @@
 	    			<h3>으어얽</h3>
 	    		</div>
 	    		<div class="tab-pane fade show active" id="member_management">
-	    			<br>
-				    <h3><b>김지혜</b>님 이력서</h3>
+				    
 				    <br>
 				    <form>
 				    	<div class="container">
+						    <h2 style="font-family:Do Hyeon;">이력서 추가</h2><br>
 						    <div id="TopInfo">
 							    <div class="input-group mb-3">
-									<span class="col-1 input-group-text input_titles">지원분야</span>
-									<div class="col-3 input-group-text writed">
-										<input type="text" disabled class="form-control-plaintext" value="개발자">
-									</div>
-									<span class="col-1 input-group-text input_titles">경력구분<br>(신입/경력)</span>
-									<div class="col-3 input-group-text writed">
-										<input type="text" disabled class="form-control-plaintext" value="신입">
-									</div>
-									<span class="col-1 input-group-text input_titles">희망연봉</span>
-									<div class="col-3 input-group-text writed">
-										<input type="text" disabled class="form-control-plaintext" value="3500만원">
-									</div>
+									<span class="input-group-text input_titles">지원분야</span>
+									<input type="text" class="form-control" value="개발자">
+									<span class="input-group-text input_titles">경력구분<br>(신입/경력)</span>
+									<input type="text" class="form-control" value="신입">
+									<span class="input-group-text input_titles">희망연봉</span>
+									<input type="text" class="form-control" value="3500만원">
 								</div>
 							</div>
 							<h6>□기본정보</h6>
 							<div id="BasicInfo">
 								<div class="row g-0" id=>
 									<div class="col-md-2">
-										<img class="img-thumbnail" src="../../../image/woman.jpg" alt="증명사진" id="preview" style="width:160px; height:145px;">
-										<!-- 
+										<img class="img-thumbnail" src="../../../image/woman.jpg" alt="" id="preview" style="width:160px; height:145px;">
 										<label id="input-file-button" for="input-file" style="position: relative; left: 25px;">
 											사진첨부
 										</label>
-										<input type="file" onchange="readURL(this);" id="input-file" style="display:none;"> 
-										-->
+										<input type="file" onchange="readURL(this);" id="input-file" style="display:none;">
 									</div>
 									<div class="col-md-10">
 										<div class="row input-group mb-2">
 											<span class="col-2 input-group-text input_titles justify-content-center">성명</span>
-											<div class="col-4 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="김지혜">
-											</div>
+											<input class="col-4 form-control" type="text" value="김지혜">
 											<span class="col-2 input-group-text input_titles justify-content-center">한문</span>
-											<div class="col-4 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="金池慧">
-											</div>
+											<input class="col-4 form-control" type="text" value="金池慧">
 										</div>
 										<div class="row input-group mb-2">
 											<span class="col-2 input-group-text input_titles justify-content-center">영문</span>
-											<div class="col-4 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="JiHae Kim">
-											</div>
+											<input class="col-4 form-control" type="text" value="Jihae Kim">
 											<span class="col-2 input-group-text input_titles justify-content-center">생년월일</span>
-											<div class="col-4 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="960416">
-											</div>
+											<input class="col-4 form-control" type="text" value="960416">
 										</div>
 										<div class="row input-group mb-2">
 											<span class="col-2 input-group-text input_titles justify-content-center">전화번호</span>
-											<div class="col-4 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="010 - 5142 - 7220">
-											</div>
+											<div class="col-4">
+												<div class="input-group" style="font-size: 22px;">
+													<select class="form-select" aria-label="cp_front">
+													  <option value="02">02</option>
+													  <option value="010" selected>010</option>
+													  <option value="011">011</option>
+													</select>
+													&nbsp;-&nbsp;
+		 											<input type="text" aria-label="cp_middle" class="form-control" value="1111">&nbsp;-&nbsp;
+		 											<input type="text" aria-label="cp_end" class="form-control" value="2345">
+	 											</div>
+ 											</div>
  											<span class="col-2 input-group-text input_titles justify-content-center">비상연락망</span>
-											<div class="col-4 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="010 - 4789 - 4553">
-											</div>
+											<div class="col-4" style="font-size: 22px;">
+												<div class ="input-group">
+													<select class="form-select" aria-label="ep_front">
+													  <option value="02">02</option>
+													  <option value="010" selected>010</option>
+													  <option value="011">011</option>
+													</select>
+													&nbsp;-&nbsp;
+		 											<input type="text" aria-label="ep_middle" class="form-control" value="5678">&nbsp;-&nbsp;
+		 											<input type="text" aria-label="ep_end" class="form-control" value="9101">
+	 											</div>
+ 											</div>
 										</div>
 										<div class="row input-group mb-2">
 											<span class="col-2 input-group-text input_titles justify-content-center">이메일</span>
-											<div class="col-4 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="jihae0416@gmail.com">
-											</div>
+											<span class="col-4">
+												<span class="input-group" style="font-size: 22px;">
+													<input class="form-control" type="text" value="jihae0416">&nbsp;@&nbsp;
+													<input class="form-control" type="text" value="gmail.com">
+												</span>
+											</span>
 											<span class="col-2 input-group-text input_titles justify-content-center">나이</span>
-											<div class="col-4 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="26">
-											</div>
+											<input class="col-4 form-control" type="text" value="26">
 										</div>
 										<div class="row input-group mb-2">
 											<span class="col-2 input-group-text input_titles justify-content-center">주소</span>
-											<div class="col-10 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="서울특별시 서초구 방배동 833-9 ">
-											</div>
+											<input class="col-10 form-control" type="text" value="서울특별시 서초구 방배동 833-9">
 										</div>
 										<div class="row input-group mb-2">
 											<span class="col-2 input-group-text input_titles justify-content-center">취미생활</span>
-											<div class="col-10 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="서핑, 무용">
-											</div>
+											<input class="col-10 form-control" type="text" placeholder="선택사항" value="서핑, 무용">
 										</div>
 									</div>
 								</div>
@@ -198,38 +195,18 @@
 											<span class="col input-group-text input_titles justify-content-center">소재지</span>
 										</div>
 										<div class="row input-group">
-											<div class="col input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="2014.03 ~ 2021.02">
-											</div>
-											<div class="col input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="연세대학교">
-											</div>
-											<div class="col input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="졸업">
-											</div>
-											<div class="col input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="심리학과">
-											</div>
-											<div class="col input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="서울">
-											</div>		
+											<input type="text" class="form-control" placeholder="2017.03 ~ 2021.02" value="2014.03 ~ 2021.02">
+											<input type="text" class="form-control" placeholder="ㅇㅇ대학교" value="연세대학교">
+											<input type="text" class="form-control" placeholder="졸업" value="졸업">
+											<input type="text" class="form-control" placeholder="00과" value="심리학과">
+											<input type="text" class="form-control" placeholder="서울" value="서울">		
 										</div>
 										<div class="row input-group">
-											<div class="col input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="2011.03 ~ 2014.03">
-											</div>
-											<div class="col input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="숙명여자고등학교">
-											</div>
-											<div class="col input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="졸업">
-											</div>
-											<div class="col input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="-">
-											</div>
-											<div class="col input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="서울">
-											</div>		
+											<input type="text" class="form-control" placeholder="2014.03 ~ 2017.02" value="2011.03 ~ 2014.03">
+											<input type="text" class="form-control" placeholder="ㅇㅇ고등학교" value="숙명여자고등학교">
+											<input type="text" class="form-control" placeholder="졸업" value="졸업">
+											<input type="text" class="form-control" placeholder="-" value="-">
+											<input type="text" class="form-control" placeholder="서울" value="서울">		
 										</div>
 									</div>
 								</div>
@@ -244,15 +221,14 @@
 									<span class="col input-group-text input_titles justify-content-center">연수과정 및 내용</span>
 								</div>
 								<div class="row input-group">
-									<div class="col input-group-text writed">
-										<input disabled class="form-control-plaintext" type="text" value="2022.01.21 ~ 2022.07.03">
-									</div>
-									<div class="col input-group-text writed">
-										<input disabled class="form-control-plaintext" type="text" value="이젠IT아카데미">
-									</div>
-									<div class="col input-group-text writed">
-										<input disabled class="form-control-plaintext" type="text" value="API활용 자바(JAVA)웹& 네이티브앱 개발(AWS클라우드)">
-									</div>	
+									<input type="text" class="col-2 form-control" placeholder="2021.06 ~ 2021.08">
+									<input type="text" class="col-2 form-control" placeholder="ㅇㅇㅇ학원">
+									<input type="text" class="col-8 form-control" placeholder="Python활용 빅데이터 분석과정">
+								</div>
+								<div class="row input-group">
+									<input type="text" class="form-control">
+									<input type="text" class="form-control">
+									<input type="text" class="form-control">
 								</div>
 							</div>
 							<br>
@@ -268,31 +244,31 @@
 											<span class="col-4 input-group-text input_titles justify-content-center">보유기술 및 수준</span>
 										</div>
 										<div class="row input-group">
-											<div class="col-3 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="2021.11.30">
+											<div class="col-3">
+												<input type="text" class="form-control">
 											</div>
-											<div class="col-3 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value=" ADsP	">
+											<div class="col-3">
+												<input type="text" class="form-control">
 											</div>
-											<div class="col-2 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="한국데이터산업진흥원">
+											<div class="col-2">
+												<input type="text" class="form-control">
 											</div>
-											<div class="col-4 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="준전문가">
+											<div class="col-4">
+												<input type="text" class="form-control">
 											</div>
 										</div>
 										<div class="row input-group">
-											<div class="col-3 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="2020.09.25">
+											<div class="col-3">
+												<input type="text" class="form-control">
 											</div>
-											<div class="col-3 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="정보처리기능사">
+											<div class="col-3">
+												<input type="text" class="form-control">
 											</div>
-											<div class="col-2 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="한국산업인력공단">
+											<div class="col-2">
+												<input type="text" class="form-control">
 											</div>
-											<div class="col-4 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="NCS 3">
+											<div class="col-4">
+												<input type="text" class="form-control">
 											</div>
 										</div>
 									</div>
@@ -311,17 +287,31 @@
 											<div class="col-5 input-group-text input_titles justify-content-center">경험 및 습득역량</div>
 										</div>
 										<div class="row input-group">
-											<div class="col-3 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="-">
+											<div class="col-3">
+												<input type="text" class="form-control">
 											</div>
-											<div class="col-2 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="-">
+											<div class="col-2">
+												<input type="text" class="form-control">
 											</div>
-											<div class="col-2 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="-">
+											<div class="col-2">
+												<input type="text" class="form-control">
 											</div>
-											<div class="col-5 input-group-text writed">
-												<input disabled class="form-control-plaintext" type="text" value="-">
+											<div class="col-5">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="row input-group">
+											<div class="col-3">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-5">
+												<input type="text" class="form-control">
 											</div>
 										</div>
 									</div>
@@ -332,11 +322,48 @@
 					<br><br>
 					<div class="position-relative">
 				    	<div class="position-absolute top-0">
-					    	<a href="./memberList.html"><button type="button" class="btn btn-secondary">뒤로가기</button></a>
+					    	<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#back_modal">뒤로가기</button>
 				    	</div>
 				    	<div class="position-absolute end-0">
-					    	<a href="./memberMod.html"><button type="button" class="btn btn-primary">수정</button></a>
+					    	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_modal">제출하기</button>
 				    	</div>
+				    	<div class="modal" tabindex="-1" id="back_modal">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title">뒤로가기</h5>
+						        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						      </div>
+						      <div class="modal-body">
+						        <p>작성된 내용은 저장되지 않습니다.</p>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+						        <a href="./memberList.html"><button type="button" class="btn btn-danger">확인</button></a>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+						<div class="modal" tabindex="-1" id="register_modal">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title">제출</h5>
+						        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						      </div>
+						      <div class="modal-body">
+						        <p>
+						        	제출하고나면 수정할 수 없습니다.<br>
+						        	정말 제출하시겠습니까?
+						        </p>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+						        <a href="./memberList.html"><button type="button" class="btn btn-primary">제출</button></a>
+						      </div>
+						    </div>
+						  </div>
+						</div>
 				    </div><br><br><br><br>
 			    </div>
 			</div>
@@ -351,20 +378,18 @@
 	<script src="https://kit.fontawesome.com/bf82a9a80d.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<script>
-		$(document).ready(function(){
-			$("#ChkA").click(function(){
-				if($("#ChkA").is(":checked")) $("input[name=Chk]").prop("checked", true);
-				else $("input[name=Chk]").prop("checked",false);
-			});
-			
-			$("input[name=Chk]").click(function(){
-				var total = $("input[name=Chk]").length;
-				var checked = $("input[name=Chk]:checked").length;
-				
-				if(total != checked) $("#ChkA").prop("checked",false);
-				else $("#ChkA").prop("checked",true);
-			})
-		});
+	function readURL(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				document.getElementById('preview').src = e.target.result;
+			};
+			reader.readAsDataURL(input.files[0]);
+		} 
+		else {
+			document.getElementById('preview').src = "";
+		}
+	}
 	</script>
 	
 	
