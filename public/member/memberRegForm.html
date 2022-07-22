@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>MemberReg</title>
+	<title>MemberRegForm</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 	<style type="text/css">
@@ -121,7 +121,7 @@
 									<div class="col-md-10">
 										<div class="row input-group mb-2">
 											<span class="col-2 input-group-text input_titles justify-content-center">성명</span>
-											<input class="col-4 form-control" type="text">
+											<input class="form-control" type="text">
 											<span class="col-2 input-group-text input_titles justify-content-center">한문</span>
 											<input class="col-4 form-control" type="text">
 										</div>
@@ -133,7 +133,7 @@
 										</div>
 										<div class="row input-group mb-2">
 											<span class="col-2 input-group-text input_titles justify-content-center">전화번호</span>
-											<div class="col-4">
+											<div class="col-4 border">
 												<div class="input-group" style="font-size: 22px;">
 													<select class="form-select" aria-label="cp_front">
 													  <option value="02">02</option>
@@ -141,12 +141,12 @@
 													  <option value="011">011</option>
 													</select>
 													&nbsp;-&nbsp;
-		 											<input type="text" aria-label="cp_middle" class="form-control">&nbsp;-&nbsp;
-		 											<input type="text" aria-label="cp_end" class="form-control">
+		 											<input type="text" aria-label="cp_middle" class="form-control" style="border:none;">&nbsp;-&nbsp;
+		 											<input type="text" aria-label="cp_end" class="form-control" style="border:none;">
 	 											</div>
  											</div>
  											<span class="col-2 input-group-text input_titles justify-content-center">비상연락망</span>
-											<div class="col-4" style="font-size: 22px;">
+											<div class="col-4 border" style="font-size: 22px;">
 												<div class ="input-group">
 													<select class="form-select" aria-label="ep_front">
 													  <option value="02">02</option>
@@ -154,17 +154,17 @@
 													  <option value="011">011</option>
 													</select>
 													&nbsp;-&nbsp;
-		 											<input type="text" aria-label="ep_middle" class="form-control">&nbsp;-&nbsp;
-		 											<input type="text" aria-label="ep_end" class="form-control">
+		 											<input type="text" aria-label="ep_middle" class="form-control" style="border:none;">&nbsp;-&nbsp;
+		 											<input type="text" aria-label="ep_end" class="form-control" style="border:none;">
 	 											</div>
  											</div>
 										</div>
 										<div class="row input-group mb-2">
-											<span class="col-2 input-group-text input_titles justify-content-center">이메일</span>
-											<span class="col-4">
+											<span class="col-2 input-group-text input_titles justify-content-center border">이메일</span>
+											<span class="col-4 border">
 												<span class="input-group" style="font-size: 22px;">
-													<input class="form-control" type="text">&nbsp;@&nbsp;
-													<input class="form-control" type="text">
+													<input class="form-control" type="text" style="border:none;">&nbsp;@&nbsp;
+													<input class="form-control" type="text" style="border:none;">
 												</span>
 											</span>
 											<span class="col-2 input-group-text input_titles justify-content-center">나이</span>
@@ -250,27 +250,27 @@
 												<input type="text" class="form-control" style="border:none;">
 											</div>
 											<div class="col-3 border">
-												<input type="text" class="form-control">
+												<input type="text" class="form-control" style="border:none;">
 											</div>
 											<div class="col-2 border">
-												<input type="text" class="form-control">
+												<input type="text" class="form-control" style="border:none;">
 											</div>
 											<div class="col-4 border">
-												<input type="text" class="form-control">
+												<input type="text" class="form-control" style="border:none;">
 											</div>
 										</div>
 										<div class="row input-group">
-											<div class="col-3">
-												<input type="text" class="form-control">
+											<div class="col-3 border">
+												<input type="text" class="form-control" style="border:none;">
 											</div>
-											<div class="col-3">
-												<input type="text" class="form-control">
+											<div class="col-3 border">
+												<input type="text" class="form-control" style="border:none;">
 											</div>
-											<div class="col-2">
-												<input type="text" class="form-control">
+											<div class="col-2 border">
+												<input type="text" class="form-control" style="border:none;">
 											</div>
-											<div class="col-4">
-												<input type="text" class="form-control">
+											<div class="col-4 border">
+												<input type="text" class="form-control" style="border:none;">
 											</div>
 										</div>
 									</div>
@@ -289,31 +289,31 @@
 											<div class="col-5 input-group-text input_titles justify-content-center">경험 및 습득역량</div>
 										</div>
 										<div class="row input-group">
-											<div class="col-3">
-												<input type="text" class="form-control">
+											<div class="col-3 border">
+												<input type="text" class="form-control" style="border:none;">
 											</div>
-											<div class="col-2">
-												<input type="text" class="form-control">
+											<div class="col-2 border">
+												<input type="text" class="form-control" style="border:none;">
 											</div>
-											<div class="col-2">
-												<input type="text" class="form-control">
+											<div class="col-2 border">
+												<input type="text" class="form-control" style="border:none;">
 											</div>
-											<div class="col-5">
-												<input type="text" class="form-control">
+											<div class="col-5 border">
+												<input type="text" class="form-control" style="border:none;">
 											</div>
 										</div>
 										<div class="row input-group">
-											<div class="col-3">
-												<input type="text" class="form-control">
+											<div class="col-3 border">
+												<input type="text" class="form-control" style="border:none;">
 											</div>
-											<div class="col-2">
-												<input type="text" class="form-control">
+											<div class="col-2 border">
+												<input type="text" class="form-control" style="border:none;">
 											</div>
-											<div class="col-2">
-												<input type="text" class="form-control">
+											<div class="col-2 border">
+												<input type="text" class="form-control" style="border:none;">
 											</div>
-											<div class="col-5">
-												<input type="text" class="form-control">
+											<div class="col-5 border">
+												<input type="text" class="form-control" style="border:none;">
 											</div>
 										</div>
 									</div>
