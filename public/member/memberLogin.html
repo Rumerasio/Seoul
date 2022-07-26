@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MemberLogin</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<style type="text/css">
+		table,td{
+			text-align:center;
+			border:1px solid #0F52BA20;
+		}
+		#list_box_th {
+			background-color: #00808080;
+		}
+		#MainLogo > a {
+			color:white;
+			font-weight: bold;
+			font-size: xx-large;
+		}
+		#MainLogo {
+			background-color:#0F52BA;
+			border-bottom: solid;
+			border-bottom-color: gray;
+			border-bottom-width: thin;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- start -->
+	
+	<div class="my-3 container">
+		<nav class="navbar">
+			<div class="container-fluid" id="MainLogo">
+				<a class="navbar-brand" href="./memberList.html">EZEN</a>
+				<div class="float-end" style="color: white;">
+					<div class="btn-group dropend">
+					  <a href="./memberLogin.html"><button type="button" class="btn"style="color:white;background-color: #0F52BA;"><b>로그인</b></button></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="container col-4 rounded" style="background-color:#0060a040; text-align: center; position: relative; top:100px;">
+			<br><br><h3 style="color:white;">관리자 로그인</h3><br><br><br>
+			<form class="row g-3">
+				<div class="mb-3 row">
+				  <label for="staticEmail" class="col-4 col-form-label">아이디</label>
+				  <div class="col-8">
+				    <input type="text" class="form-control" id="inputId">
+				  </div>
+				</div>
+				<div class="mb-3 row">
+				  <label for="inputPassword" class="col-4 col-form-label">패스워드</label>
+				  <div class="col-8">
+				    <input type="password" class="form-control" id="inputPassword">
+				  </div>
+				</div>
+				<div class="col-12">
+					<a href="./memberList.html"><button type="button" class="btn btn-secondary mb-3 justify-content-center">로그인</button></a>
+				</div>
+			</form>
+		</div>
+    </div>
+    
+    
+	
+	<!-- end -->
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/bf82a9a80d.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	
+	
+	
+	<!-- Bootstrap의 경우 class의 활용도가 매우 높은데 
+	class="Thumbnail text_content" {<- Thumbnail과 text_content 클래스 두개 모두 호출되는것.} 
+	" " 안에서 명칭 여러개가 (spacebar) 로 구분되는데 여러개의 클래스를 받아 들인다 -->
+</body>
+</html>
+
