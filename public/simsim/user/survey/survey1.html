@@ -43,11 +43,17 @@
 		height: 70px;
 		background-color: rgb(190, 190, 190);
 	}
-	#like_btn, #report_btn, #comment_delete_btn{
+	.like_btn, .report_btn, #comment_delete_btn{
 		color:white;
-		font-size: 10px;
+		font-size: 12px;
 		width: 70px;
 		height:33px;
+	}
+	.like_btn{
+		 background-color:rgba(52, 152, 219, 0.56);
+	}
+	.report_btn{
+		background-color:rgba(192, 57, 43, 0.61);
 	}
 </style>
 
@@ -65,7 +71,7 @@
 			<div class="float-md-end">
 				<input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
 				<label class="btn" for="btn-check"><i class="fa-solid fa-heart float-me-end"></i> 60</label>
-				<button type="button" class="btn" style="background-color:rgb(197, 59, 222); color:white; width:300px;">시작하기</button>
+				<a href="./survey1Conent.html"><button type="button" class="btn" style="background-color:rgb(197, 59, 222); color:white; width:300px;">시작하기</button></a>
 			</div>
 			<h4 style="font-style: italic;">나는 무슨 별자리일까?</h4>
 			<p>&nbsp;&nbsp;&nbsp;도시에선 보기 힘든 밤하늘의 아름다운 별! <br>나를 뜻하는 별자리가 무엇일지 궁금하지 않으세요?</p>
@@ -95,8 +101,8 @@
 					<input type="text" readonly class="form-control-plaintext" id="comment_content" value="내용은 차차하고 일단 배경이 너무 예뻐서 좋았습니다. 사수자리 나왔네요">
 				</div>
 				<div class="col-1" ">
-					<button type="button" class="btn btn-info" id="like_btn"><i class="fa-solid fa-thumbs-up"></i> 0</button>
-					<button type="button" class="btn btn-danger" id="report_btn">신고</button>
+					<button type="button" class="btn like_btn"><i class="fa-solid fa-thumbs-up"></i> 0</button>
+					<button type="button" class="btn report_btn">신고</button>
 				</div>
 			</div>
 			
@@ -109,7 +115,7 @@
 					<input type="text" readonly class="form-control-plaintext" id="comment_content" value="내가 왜 전갈자리? 난 원래 양자리인데!">
 				</div>
 				<div class="col-1" ">
-					<button type="button" class="btn btn-info" id="like_btn"><i class="fa-solid fa-thumbs-up"></i> 12</button>
+					<button type="button" class="btn like_btn"><i class="fa-solid fa-thumbs-up"></i> 12</button>
 					<button type="button" class="btn btn-secondary" id="comment_delete_btn">삭제</button>
 				</div>
 			</div>
@@ -123,10 +129,37 @@
 					<input type="text" readonly class="form-control-plaintext" id="comment_content" value="내용은 차차하고 일단 배경이 너무 예뻐서 좋았습니다. 사수자리 나왔네요">
 				</div>
 				<div class="col-1" ">
-					<button type="button" class="btn btn-info" id="like_btn"><i class="fa-solid fa-thumbs-up"></i> 0</button>
-					<button type="button" class="btn btn-danger" id="report_btn">신고</button>
+					<button type="button" class="btn like_btn"><i class="fa-solid fa-thumbs-up"></i> 0</button>
+					<button type="button" class="btn report_btn">신고</button>
 				</div>
 			</div>
+			<nav class="nav justify-content-center mt-4">
+			  <ul class="pagination pagination-sm">
+			  	<li class="page-item">
+			      <a class="page-link" href="#" >
+			        <span><i class="fa-solid fa-backward-step"></i></span>
+			      </a>
+			    </li>
+			    <li class="page-item">
+			      <a class="page-link" href="#" aria-label="Previous">
+			        <span><i class="fa-solid fa-chevron-left"></i></span>
+			      </a>
+			    </li>
+			    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+			    <li class="page-item"><a class="page-link" href="#">2</a></li>
+			    <li class="page-item"><a class="page-link" href="#">3</a></li>
+			    <li class="page-item">
+			      <a class="page-link" href="#" aria-label="Next">
+			        <span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+			      </a>
+			    </li>
+			    <li class="page-item">
+			      <a class="page-link" href="#">
+			        <span><i class="fa-solid fa-forward-step"></i></span>
+			      </a>
+			    </li>
+			  </ul>
+			</nav>
 		</div>
 	</div>
 </div>
