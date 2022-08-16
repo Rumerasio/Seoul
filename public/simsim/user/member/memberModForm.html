@@ -32,11 +32,12 @@
 <body>
 <nav class="navbar">
 	<div class="container-fluid" id="topNav">
-		<a class="navbar-brand" id="logo" href="./main.html">Simsim</a>
+		<a class="navbar-brand" id="logo" href="./mainLogedin.html">Simsim</a>
 	</div>
 </nav>
 <div class="container col-7">
-	<div style="text-align:center;">
+	<div style="text-align:center; position: relative;">
+		<a href="./memberMypage.html"><button type="button" class="btn btn-sm" style="position:absolute; left:120px; width: 80px; background-color:#e6e6e6;">뒤로가기</button></a>
 		<h3 class="my-5">개인정보수정</h3>
 		<form>
 			<div class="row justify-content-center py-2">
@@ -100,35 +101,46 @@
 		</form>
 		<div class="row mt-5">
 			<div class="col-8 offset-2">
-				<a href="#"><button type="button" class="btn float-start" style="width: 100px; background-color:rgb(197, 59, 222); color:white;">수정하기</button></a>
-				<a href="#"><button type="button" class="btn btn-danger float-end" style="width: 100px;">탈퇴</button></a>
+				<a href="./memberMypage.html"><button type="button" class="btn float-start" style="width: 100px; background-color:rgb(197, 59, 222); color:white;">수정하기</button></a>
+				<button type="button" class="btn btn-danger float-end" data-bs-toggle="modal" data-bs-target="#member_leave" style="width: 100px;">탈퇴</button>
+			</div>
+		</div>
+		<div class="modal fade" tabindex="-1" id="member_leave">
+			<div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+				    <h5 class="modal-title">회원 탈퇴</h5>
+				    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				  </div>
+				  <div class="modal-body">
+				    <p>계정을 다시 복구 할 수 없습니다. <br> 정말 탈퇴하시겠습니까?</p>
+				  </div>
+				  <div class="modal-footer">
+				    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+				    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#member_leave_alert">탈퇴</button>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" tabindex="-1" id="member_leave_alert">
+			<div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+				    <h5 class="modal-title">회원 탈퇴</h5>
+				    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				  </div>
+				  <div class="modal-body">
+				    <p>탈퇴되었습니다.</p>
+				  </div>
+				  <div class="modal-footer">
+				    <a href="./main.html"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">확인</button></a>
+				  </div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<!--  modal link
-<div class="position-absolute top-0">
-   	<button type="button" class="btn btn-danger" title="삭제여부 삭제처리" data-bs-toggle="modal" data-bs-target="#state_delete_modal"><i class="fa-solid fa-trash-can"></i></button>
-  	</div>
-  	<div class="modal" tabindex="-1" id="state_delete_modal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">삭제여부 삭제처리</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>정말 삭제처리하시겠습니까?</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
-        <button type="button" class="btn btn-danger">삭제처리</button>
-      </div>
-    </div>
-  </div>
-</div> 
--->
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
