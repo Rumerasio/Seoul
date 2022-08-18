@@ -26,6 +26,19 @@
 	text-decoration: none;
 	color:black;
 	}
+	.radio-design input[type="radio"] {
+		display: none;
+	}
+	.radio-design input[type="radio"] + span {
+		display: inline-block;
+		background: none;
+		border:none;
+		cursor:pointer;
+	}
+	.radio-design input[type="radio"]:checked + span {
+		text-decoration: underline;
+		font-weight: bold;
+	}
 </style>
 
 <body>
@@ -35,31 +48,19 @@
 	</div>
 </nav>
 <div class="container my-5">
-	<div style="text-align:center; position:relative;">
-		<a href="./memberMypage.html"><button type="button" class="btn btn-sm" style="position:absolute; left:80px; width: 80px; background-color:#e6e6e6;">뒤로가기</button></a>
-		<h3 class="my-5"style="font-family: sans-serif;"><b><i class="fa-regular fa-comment"></i> 내 댓글</b></h3>
-	</div>
-	<div>
-		<ul class="nav justify-content-end">
-			<!-- <li class="nav-item">
-				<input type="radio" class="btn-check" id="Comment_order_new">
-				<label class="nav-link active" for="Commnet_order_new">최신순</label>
-				<a class="nav-link active" aria-current="page" href="#">최신순</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">좋아요순</a>
-			</li> -->
-			<li class="nav-item">
-				<input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
-				<label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
-			</li>
-			<li class="nav-item">
-				<input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
-				<label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>
-			</li>
-		</ul>
-	</div>
 	<div class="container" style="width:900px;">
+		<div style="text-align:center; position:relative;">
+			<a href="./memberMypage.html"><button type="button" class="btn btn-sm" style="position:absolute; left:0px; width: 80px; background-color:#e6e6e6;">뒤로가기</button></a>
+			<h3 class="my-5"style="font-family: sans-serif;"><b><i class="fa-regular fa-comment"></i> 내 댓글</b></h3>
+		</div>
+		<div style="text-align: right; position:relative;">
+			<label class="radio-design">
+				<input type="radio" name="cp_item" value="최신순" checked="checked"><span>최신순</span>
+			</label>
+			<label class="radio-design">
+				<input type="radio" name="cp_item" value="좋아요순"><span>좋아요순</span>
+			</label>
+		</div>
 		<div class="container pt-1 my-3" style="background-color: white;">
 			<h6 class="my-1" style="font-size: 10px; display:inline-block;">별자리 테스트</h6>
 			<div class="row py-2">
