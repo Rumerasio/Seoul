@@ -11,6 +11,12 @@
 	body {
 	background-color: rgba(0, 86, 102, 0.07);
 	}
+	#topNav{
+		background-color:white;
+		border-bottom: solid;
+		border-bottom-color: gray;
+		border-bottom-width: thin;
+	}
 	#logo{
 	font-size: 40px;
 	font-family: Edu NSW ACT Foundation;
@@ -23,7 +29,11 @@
 </style>
 
 <body>
-
+<nav class="navbar">
+	<div class="container-fluid" id="topNav">
+		<a class="navbar-brand" id="logo" href="./main.html">Simsim</a>
+	</div>
+</nav>
 <div class="container" style="background-color:white; text-align: center; position:relative; top:200px; width: 600px; padding-left:0px;padding-right: 0px;">
 	<div>
 		<ul class="nav nav-tabs">
@@ -35,10 +45,9 @@
 	   		</li>
    		</ul>
 	</div>
-	
 	<div class="tab-content">
 		<div class="tab-pane fade show active" id="find_ID" role="tabpanel">
-			<form class="row p-1 mt-5">
+			<div class="row p-1 mt-5">
 				<div class="my-3 row justify-content-center">
 				  <label for="find_ID_dob" class="col-2 col-form-label">생년월일</label>
 				  <div class="col-6">
@@ -52,12 +61,24 @@
 				  </div>
 				</div>
 				<div class="row my-5 justify-content-center">
-					<input type="button" class="btn" value="확인" style="background-color:#0072b3; color:white; width:180px;">
+					<input type="button" class="btn" value="확인" data-bs-toggle="modal" data-bs-target="#find_ID_ID" style="background-color:#0072b3; color:white; width:180px;">
 				</div>
-			</form>
+				<div class="modal fade" id="find_ID_ID" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered">
+				    <div class="modal-content">
+				      <div class="modal-body">
+				        아이디는 'escaida15'입니다.
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-primary col-8 mx-auto" data-bs-dismiss="modal">확인</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
 		</div>
 		<div class="tab-pane fade" id="find_password" role="tabpanel">
-			<form class="row p-1 mt-5">
+			<div class="row p-1 mt-5">
 				<div class="my-3 row justify-content-center">
 				  <label for="find_password_ID" class="col-2 col-form-label">아이디</label>
 				  <div class="col-6">
@@ -77,9 +98,32 @@
 				  </div>
 				</div>
 				<div class="row my-5 justify-content-center">
-					<input type="button" class="btn" value="확인" style="background-color:#0072b3; color:white; width:180px;">
+					<input type="button" class="btn" value="확인"  data-bs-toggle="modal" data-bs-target="#find_password_initialize" style="background-color:#0072b3; color:white; width:180px;">
 				</div>
-			</form>
+				<div class="modal fade" id="find_password_initialize" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLabel">비밀번호 재설정</h5>
+				        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				      </div>
+				      <div class="modal-body mb-3 row">
+					    <label for="inputPassword" class="col-4 col-form-label my-1">비밀번호</label>
+					    <div class="col-8">
+					      <input type="password" class="form-control" id="inputPassword">
+					    </div>
+					    <label for="inputPasswordCheck" class="col-4 col-form-label my-1">비밀번호 확인</label>
+					    <div class="col-8">
+					      <input type="password" class="form-control" id="inputPasswordCheck">
+					    </div>
+					  </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-primary col-8 mx-auto" data-bs-dismiss="modal">재설정</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
