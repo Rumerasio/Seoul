@@ -83,7 +83,12 @@
 		<h5 class="mt-3"><b>컨텐츠 관리</b></h5>
 		<h6 style="color:gray;"><b>컨텐츠 등록</b></h6>
 		<div class="container ps-5 pb-5" style="background-color: white; position:relative;">
-			<div class="my-3 pt-3"><h6"><b>컨텐츠 메인화면</b></h6></div>
+			<div class="my-3 pt-3 float-start"><h6 style="display: inline-block;"><b>컨텐츠 메인화면</b></h6></div>
+			<div class="form-check form-switch float-end my-3 pt-3" style="display: inline-block;">
+			  <input class="form-check-input" type="checkbox" role="switch" id="multichoiceNy">
+			  <label class="form-check-label" for="multichoiceNy">컨텐츠 공개</label>
+			</div>
+			<div style="clear:both;"></div>
 			<div class="mb-3">
 			  <label for="contentTitleInput" class="form-label">컨텐츠 제목</label>
 			  <input type="text" class="form-control form-control-sm" id="contentTitleInput">
@@ -151,9 +156,185 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="my-3 pt-3"><h6><b>컨텐츠 페이지 작성</b></h6></div>
-			<div class="container" style="margin-left:0px; border:solid; border-width:2px; width:900px;">
-			<div>Page 1 </div>
+			<div class="container" style="margin-left:0px; border:solid; border-width:2px; width:100%;">
+				<div class="float-start my-3"><h5>Page 1</h5></div>
+				<div class="float-end my-3">
+					<button class="btn btn-light btn-sm" style="border:none;"><i class="fa-solid fa-plus"></i></button>
+					<button class="btn btn-secondary btn-sm" style="border:none;"><i class="fa-solid fa-minus"></i></button>
+				</div>
+				<div style="clear:both;"></div>
+				<div class="mb-3">
+				  <input type="text" class="form-control form-control-sm" id="contentTitleInput" placeholder="질문">
+				</div>
+				<div class="my-3 row">
+					<h6 class="col-2"><b>선택지</b></h6>
+					<div class="form-check form-switch col-2">
+					  <input class="form-check-input" type="checkbox" role="switch" id="multichoiceNy">
+					  <label class="form-check-label" for="multichoiceNy">중복 선택</label>
+					</div>
+				</div>
+				<div class="mb-3 row">
+					<div class="col-10">
+						<input type="text" class="form-control form-control-sm" id="choice1" placeholder="선택지1 내용">
+					</div>
+					<div class="col-1">
+						<input type="text" class="form-control form-control-sm col-1" id="choice1score" placeholder="배점">
+					</div>
+					<div class="col-1">
+					  <button class="btn btn-light btn-sm" style="border:none;"><i class="fa-solid fa-plus"></i></button>
+					  <button class="btn btn-secondary btn-sm" style="border:none;"><i class="fa-solid fa-minus"></i></button>
+					</div>
+				</div>
+				<div class="mb-3 row">
+					<div class="col-10">
+						<input type="text" class="form-control form-control-sm" id="choice2" placeholder="선택지2 내용">
+					</div>
+					<div class="col-1">
+						<input type="text" class="form-control form-control-sm col-1" id="choice2score" placeholder="배점">
+					</div>
+					<div class="col-1">
+					  <button class="btn btn-light btn-sm" style="border:none;"><i class="fa-solid fa-plus"></i></button>
+					  <button class="btn btn-light btn-sm" style="border:none;"><i class="fa-solid fa-minus"></i></button>
+					</div>
+					<div class="col-12 mt-3">
+						<div class="row justify-content-center">
+							<div class="row justify-content-center">
+								<img class="img-thumbnail" alt="" id="preview5" style="width:400px; height:210px;">
+							</div>
+							<h6 class="my-3" style="text-align: center;">질문 이미지<br>(730 x *)</h6>
+							<label class="btn btn-sm mb-4" id="input-file-button" for="input-file5" style="width:100px; background-color:#525252">첨부파일</label>
+							<input type="file" onchange="readURL5(this);" id="input-file5" style="display:none;">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container my-5" style="margin-left:0px; border:solid; border-width:2px; width:100%;">
+				<div class="float-start my-3"><h5>Page 2</h5></div>
+				<div class="float-end my-3">
+					<button class="btn btn-light btn-sm" style="border:none;"><i class="fa-solid fa-plus"></i></button>
+					<button class="btn btn-secondary btn-sm" style="border:none;"><i class="fa-solid fa-minus"></i></button>
+				</div>
+				<div style="clear:both;"></div>
+				<div class="mb-3">
+				  <input type="text" class="form-control form-control-sm" id="contentTitleInput" placeholder="질문">
+				</div>
+				<div class="my-3 row">
+					<h6 class="col-2"><b>선택지</b></h6>
+					<div class="form-check form-switch col-2">
+					  <input class="form-check-input" type="checkbox" role="switch" id="multichoiceNy">
+					  <label class="form-check-label" for="multichoiceNy">중복 선택</label>
+					</div>
+				</div>
+				<div class="mb-3 row">
+					<div class="col-10">
+						<input type="text" class="form-control form-control-sm" id="choice1" placeholder="선택지1 내용">
+					</div>
+					<div class="col-1">
+						<input type="text" class="form-control form-control-sm col-1" id="choice1score" placeholder="배점">
+					</div>
+					<div class="col-1">
+					  <button class="btn btn-light btn-sm" style="border:none;"><i class="fa-solid fa-plus"></i></button>
+					  <button class="btn btn-secondary btn-sm" style="border:none;"><i class="fa-solid fa-minus"></i></button>
+					</div>
+				</div>
+				<div class="mb-3 row">
+					<div class="col-10">
+						<input type="text" class="form-control form-control-sm" id="choice2" placeholder="선택지2 내용">
+					</div>
+					<div class="col-1">
+						<input type="text" class="form-control form-control-sm col-1" id="choice2score" placeholder="배점">
+					</div>
+					<div class="col-1">
+					  <button class="btn btn-light btn-sm" style="border:none;"><i class="fa-solid fa-plus"></i></button>
+					  <button class="btn btn-light btn-sm" style="border:none;"><i class="fa-solid fa-minus"></i></button>
+					</div>
+					<div class="col-12 mt-3">
+						<div class="row justify-content-center">
+							<div class="row justify-content-center">
+								<img class="img-thumbnail" alt="" id="preview5" style="width:400px; height:210px;">
+							</div>
+							<h6 class="my-3" style="text-align: center;">질문 이미지<br>(730 x *)</h6>
+							<label class="btn btn-sm mb-4" id="input-file-button" for="input-file5" style="width:100px; background-color:#525252">첨부파일</label>
+							<input type="file" onchange="readURL5(this);" id="input-file5" style="display:none;">
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="my-3 pt-3"><h6><b>결과 페이지 작성</b></h6></div>
+			<div class="container my-5" style="margin-left:0px; border:solid; border-width:2px; width:100%;">
+				<div class="float-start my-3"><h5>#1</h5></div>
+				<div class="float-end my-3">
+					<button class="btn btn-light btn-sm" style="border:none;"><i class="fa-solid fa-plus"></i></button>
+					<button class="btn btn-secondary btn-sm" style="border:none;"><i class="fa-solid fa-minus"></i></button>
+				</div>
+				<div style="clear:both;"></div>
+				<div class="mb-3">
+				  <input type="text" class="form-control form-control-sm" id="contentTitleInput" placeholder="결과 제목">
+				</div>
+				<div class="row">
+					<div class="col-3 mt-3">
+						<div class="row justify-content-center">
+							<div class="row justify-content-center">
+								<img class="img-thumbnail" alt="" id="preview6" style="width:220px; height:170px;">
+							</div>
+							<h6 class="my-3" style="text-align: center;">결과 이미지<br>(200 x 170)</h6>
+							<label class="btn btn-sm mb-4" id="input-file-button" for="input-file6" style="width:100px; background-color:#525252">첨부파일</label>
+							<input type="file" onchange="readURL6(this);" id="input-file6" style="display:none;">
+						</div>
+					</div>
+					<div class="col-9">
+			  			<textarea type="text" class="form-control form-control-sm" id="contentIntroduceInput" placeholder="내용을 입력해주세요" style="resize:none; height:20em;"></textarea>
+					</div>
+				</div>
+				<div class="mb-3 row">
+				  <label for="resultScoreRange" class="col-2 col-form-label">결과 점수합 범위</label>
+				  <div class="col-1">
+				    <input type="text" class="form-control" id="resultScoreRange" placeholder="이상">
+				  </div>
+				  <div class="col-auto" style="font-size: 24px;">~</div>
+				  <div class="col-1">
+				    <input type="text" class="form-control" id="resultScoreRange" placeholder="이하">
+				  </div>
+				</div>
+			</div>
+			<div class="container my-5" style="margin-left:0px; border:solid; border-width:2px; width:100%;">
+				<div class="float-start my-3"><h5>#2</h5></div>
+				<div class="float-end my-3">
+					<button class="btn btn-light btn-sm" style="border:none;"><i class="fa-solid fa-plus"></i></button>
+					<button class="btn btn-light btn-sm" style="border:none;"><i class="fa-solid fa-minus"></i></button>
+				</div>
+				<div style="clear:both;"></div>
+				<div class="mb-3">
+				  <input type="text" class="form-control form-control-sm" id="contentTitleInput" placeholder="결과 제목">
+				</div>
+				<div class="row">
+					<div class="col-3 mt-3">
+						<div class="row justify-content-center">
+							<div class="row justify-content-center">
+								<img class="img-thumbnail" alt="" id="preview6" style="width:220px; height:170px;">
+							</div>
+							<h6 class="my-3" style="text-align: center;">결과 이미지<br>(200 x 170)</h6>
+							<label class="btn btn-sm mb-4" id="input-file-button" for="input-file6" style="width:100px; background-color:#525252">첨부파일</label>
+							<input type="file" onchange="readURL6(this);" id="input-file6" style="display:none;">
+						</div>
+					</div>
+					<div class="col-9">
+			  			<textarea type="text" class="form-control form-control-sm" id="contentIntroduceInput" placeholder="내용을 입력해주세요" style="resize:none; height:20em;"></textarea>
+					</div>
+				</div>
+				<div class="mb-3 row">
+				  <label for="resultScoreRange" class="col-2 col-form-label">결과 점수합 범위</label>
+				  <div class="col-1">
+				    <input type="text" class="form-control" id="resultScoreRange" placeholder="이상">
+				  </div>
+				  <div class="col-auto" style="font-size: 24px;">~</div>
+				  <div class="col-1">
+				    <input type="text" class="form-control" id="resultScoreRange" placeholder="이하">
+				  </div>
+				</div>
 			</div>
 		</div>	
 	</div>
@@ -223,6 +404,30 @@ function readURL4(input) {
 	} 
 	else {
 		document.getElementById('preview4').src = "";
+	}
+}
+function readURL5(input) {
+	if (input.files && input.files[0]) {
+		var reader = new FileReader();
+		reader.onload = function(e) {
+			document.getElementById('preview5').src = e.target.result;
+		};
+		reader.readAsDataURL(input.files[0]);
+	} 
+	else {
+		document.getElementById('preview5').src = "";
+	}
+}
+function readURL6(input) {
+	if (input.files && input.files[0]) {
+		var reader = new FileReader();
+		reader.onload = function(e) {
+			document.getElementById('preview6').src = e.target.result;
+		};
+		reader.readAsDataURL(input.files[0]);
+	} 
+	else {
+		document.getElementById('preview6').src = "";
 	}
 }
 </script>
