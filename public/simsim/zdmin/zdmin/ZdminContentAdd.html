@@ -37,6 +37,15 @@
 		color: white;
 		cursor: pointer;
 	}
+	#remoteControl {
+		position: fixed;
+		bottom: 80px;
+		left:40px;
+		width: 150px;
+		background-color: white;
+		text-align: center;
+		font-size:12px;
+	}
 </style>
 
 <body>
@@ -78,12 +87,33 @@
 				<li class="fw-semibold">통계</li>
 			</ul>
 		</div>
+		<div id="remoteControl">
+			<h6 class="py-1" style="background-color:#f5f5dc;"><b>바로가기</b></h6>
+			<ul class="list-unstyled">
+				<a href="#contentMainDisplay"><li>메인화면</li></a>
+				<a href="#contentImageRegistration"><li>이미지 등록</li></a>
+				<a href="#contentPageRegistration"><li>페이지 작성</li></a>
+				<a href="#contentResultRegistration"><li>결과 페이지 작성</li></a>
+			</ul>
+			<div class="py-1" style="background-color:#f5f5dc; font-size:10px;">
+				<div class="row">
+					<div class="col-4 offset-2">
+						<i class="fa-solid fa-sort-up"></i>
+						<a href="#topNav"><p>맨위로</p></a>
+					</div>
+					<div class="col-4">
+						<i class="fa-solid fa-sort-down"></i>
+						<a href="#contentRegisterFinishButton"><p>아래로</p></a>
+					</div>
+				</div>
+			</div>			
+		</div>
 	</div>
 	<div class="col-10" style="white-space:nowrap;">
 		<h5 class="mt-3"><b>컨텐츠 관리</b></h5>
 		<h6 style="color:gray;"><b>컨텐츠 등록</b></h6>
-		<div class="p-5" style="background-color: white; position:relative;">
-			<div class="my-3 pt-3 float-start"><h6 style="display: inline-block;"><b>컨텐츠 메인화면</b></h6></div>
+		<div class="p-5 mb-5" style="background-color: white; position:relative;">
+			<div class="my-3 pt-3 float-start" id="contentMainDisplay"><h6 style="display: inline-block;"><b>컨텐츠 메인화면</b></h6></div>
 			<div class="form-check form-switch float-end my-3 pt-3" style="display: inline-block;">
 			  <input class="form-check-input" type="checkbox" role="switch" id="multichoiceNy">
 			  <label class="form-check-label" for="multichoiceNy">컨텐츠 공개</label>
@@ -101,7 +131,7 @@
 			  <label for="contentIntroduceInput" class="form-label">컨텐츠 설명</label>
 			  <textarea type="text" class="form-control form-control-sm" id="contentIntroduceInput" style="resize:none; height:6.25em;"></textarea>
 			</div>
-			<div class="my-3 pt-3"><h6><b>컨텐츠 이미지 등록</b></h6></div>
+			<div class="my-3 pt-3" id="contentImageRegistration"><h6><b>컨텐츠 이미지 등록</b></h6></div>
 			<div class="row">
 				<div class="col-4">
 					<div class="row justify-content-center">
@@ -157,7 +187,7 @@
 				</div>
 			</div>
 			
-			<div class="my-3 pt-3"><h6><b>컨텐츠 페이지 작성</b></h6></div>
+			<div class="my-3 pt-3" id="contentPageRegistration"><h6><b>컨텐츠 페이지 작성</b></h6></div>
 			<div class="container" style="margin-left:0px; border:solid; border-width:2px; width:100%;">
 				<div class="float-start my-3"><h5>Page 1</h5></div>
 				<div class="float-end my-3">
@@ -263,7 +293,7 @@
 				</div>
 			</div>
 			
-			<div class="my-3 pt-3"><h6><b>결과 페이지 작성</b></h6></div>
+			<div class="my-3 pt-3" id="contentResultRegistration"><h6><b>결과 페이지 작성</b></h6></div>
 			<div class="container my-5" style="margin-left:0px; border:solid; border-width:2px; width:100%;">
 				<div class="float-start my-3"><h5>#1</h5></div>
 				<div class="float-end my-3">
@@ -336,6 +366,7 @@
 				  </div>
 				</div>
 			</div>
+			<input type="button" class="float-end btn btn-dark btn-sm" id="contentRegisterFinishButton" value="컨텐츠 작성 완료">
 		</div>	
 	</div>
 </div>
