@@ -39,7 +39,7 @@
 	}
 	#remoteControl {
 		position: fixed;
-		bottom: 80px;
+		bottom: 20px;
 		left:40px;
 		width: 150px;
 		background-color: white;
@@ -148,7 +148,7 @@
 						<img class="img-thumbnail" alt="" id="preview1" style="width:290px; height:210px;">
 					</div>
 					<div class="row justify-content-center">
-						<h6 class="my-3" style="text-align: center;">컨텐츠 이미지<br>대형배너(385 x 515)</h6>
+						<h6 class="my-3" style="text-align: center;">컨텐츠 이미지<br>중형배너(420 x 305)</h6>
 						<label class="btn btn-sm mb-4" id="input-file-button" for="input-file1" style="width:100px; background-color:#525252">첨부파일</label>
 						<input type="file" onchange="readURL1(this);" id="input-file1" style="display:none;">
 					</div>
@@ -158,7 +158,7 @@
 						<img class="img-thumbnail" alt="" id="preview2" style="width:210px; height:210px;">
 					</div>
 					<div class="row justify-content-center">
-						<h6 class="my-3" style="text-align: center;">컨텐츠 이미지<br>중형배너(210 x 210)</h6>
+						<h6 class="my-3" style="text-align: center;">컨텐츠 이미지<br>소형배너(210 x 210)</h6>
 						<label class="btn btn-sm mb-4" id="input-file-button" for="input-file2" style="width:100px; background-color:#525252">첨부파일</label>
 						<input type="file" onchange="readURL2(this);" id="input-file2" style="display:none;">
 					</div>
@@ -283,11 +283,11 @@
 					<div class="col-12 mt-3">
 						<div class="row justify-content-center">
 							<div class="row justify-content-center">
-								<img class="img-thumbnail" alt="" id="preview5" style="width:400px; height:210px;">
+								<img class="img-thumbnail" alt="" id="preview6" style="width:400px; height:210px;">
 							</div>
 							<h6 class="my-3" style="text-align: center;">질문 이미지<br>(730 x *)</h6>
-							<label class="btn btn-sm mb-4" id="input-file-button" for="input-file5" style="width:100px; background-color:#525252">첨부파일</label>
-							<input type="file" onchange="readURL5(this);" id="input-file5" style="display:none;">
+							<label class="btn btn-sm mb-4" id="input-file-button" for="input-file6" style="width:100px; background-color:#525252">첨부파일</label>
+							<input type="file" onchange="readURL6(this);" id="input-file6" style="display:none;">
 						</div>
 					</div>
 				</div>
@@ -308,11 +308,11 @@
 					<div class="col-3 mt-3">
 						<div class="row justify-content-center">
 							<div class="row justify-content-center">
-								<img class="img-thumbnail" alt="" id="preview6" style="width:220px; height:170px;">
+								<img class="img-thumbnail" alt="" id="preview7" style="width:220px; height:170px;">
 							</div>
 							<h6 class="my-3" style="text-align: center;">결과 이미지<br>(200 x 170)</h6>
-							<label class="btn btn-sm mb-4" id="input-file-button" for="input-file6" style="width:100px; background-color:#525252">첨부파일</label>
-							<input type="file" onchange="readURL6(this);" id="input-file6" style="display:none;">
+							<label class="btn btn-sm mb-4" id="input-file-button" for="input-file7" style="width:100px; background-color:#525252">첨부파일</label>
+							<input type="file" onchange="readURL7(this);" id="input-file7" style="display:none;">
 						</div>
 					</div>
 					<div class="col-9">
@@ -344,11 +344,11 @@
 					<div class="col-3 mt-3">
 						<div class="row justify-content-center">
 							<div class="row justify-content-center">
-								<img class="img-thumbnail" alt="" id="preview6" style="width:220px; height:170px;">
+								<img class="img-thumbnail" alt="" id="preview8" style="width:220px; height:170px;">
 							</div>
 							<h6 class="my-3" style="text-align: center;">결과 이미지<br>(200 x 170)</h6>
-							<label class="btn btn-sm mb-4" id="input-file-button" for="input-file6" style="width:100px; background-color:#525252">첨부파일</label>
-							<input type="file" onchange="readURL6(this);" id="input-file6" style="display:none;">
+							<label class="btn btn-sm mb-4" id="input-file-button" for="input-file8" style="width:100px; background-color:#525252">첨부파일</label>
+							<input type="file" onchange="readURL8(this);" id="input-file8" style="display:none;">
 						</div>
 					</div>
 					<div class="col-9">
@@ -366,7 +366,7 @@
 				  </div>
 				</div>
 			</div>
-			<input type="button" class="float-end btn btn-dark btn-sm" id="contentRegisterFinishButton" value="컨텐츠 작성 완료">
+			<a href="./ZdminContentList.html"><input type="button" class="float-end btn btn-dark btn-sm" id="contentRegisterFinishButton" value="컨텐츠 작성 완료"></a>
 		</div>	
 	</div>
 </div>
@@ -459,6 +459,30 @@ function readURL6(input) {
 	} 
 	else {
 		document.getElementById('preview6').src = "";
+	}
+}
+function readURL7(input) {
+	if (input.files && input.files[0]) {
+		var reader = new FileReader();
+		reader.onload = function(e) {
+			document.getElementById('preview7').src = e.target.result;
+		};
+		reader.readAsDataURL(input.files[0]);
+	} 
+	else {
+		document.getElementById('preview7').src = "";
+	}
+}
+function readURL8(input) {
+	if (input.files && input.files[0]) {
+		var reader = new FileReader();
+		reader.onload = function(e) {
+			document.getElementById('preview8').src = e.target.result;
+		};
+		reader.readAsDataURL(input.files[0]);
+	} 
+	else {
+		document.getElementById('preview8').src = "";
 	}
 }
 </script>
